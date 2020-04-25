@@ -9,6 +9,12 @@ describe("Index", () => {
   afterEach(async () => {
     await server.close();
   });
+
+  afterAll(async () => {
+    await server.close();
+    await server.end();
+    done();
+  });
   describe("GET /", () => {
     it("should return status off 200", async () => {
       const res = await request(server).get("/");
