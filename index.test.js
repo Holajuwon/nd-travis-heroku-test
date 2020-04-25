@@ -12,8 +12,7 @@ describe("Index", () => {
 
   afterAll(async () => {
     await server.close();
-    await server.end();
-    done();
+    await new Promise((resolve) => setTimeout(() => resolve(), 500));
   });
   describe("GET /", () => {
     it("should return status off 200", async () => {

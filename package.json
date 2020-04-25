@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll --detectOpenHandles --forceExit --maxWorkers=4",
+    "test": "jest --detectOpenHandles --forceExit --maxWorkers=4",
     "start": "node index.js"
   },
   "jest": {
