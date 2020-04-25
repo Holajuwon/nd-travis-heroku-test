@@ -1,8 +1,15 @@
 language: node_js
-node_js: 
-  - 12
+node_js:
+- 12
 before_install:
-  - npm install -g npm
+- npm install -g npm
 script:
 - npm install
 - npm run pretest
+deploy:
+  provider: heroku
+  api_key:
+    secure: XoeULji/3s1REMv1kshEvFiYMEy3X6cfA1XAXgxFBxk91KkMyuwEpex4wBufjAdyXK77iRSskeEunxlLV7szAZsqb6v1Y5sxOk24NMvhBQ9xxjJBUqd0ddSH+oNNDOavVC6J+36p+wKz7JJmRnuCRRceEn/rH8oF8PsZ5+VQlNjudOz8knkErviCP4zqL7uXDFaBIXJ+qdALmy1LPZ5fu9s9P0tEYSA4YjCkxxfVQurUThGmArK3+z3/1kZt4n9nv04j+/8GLtg9uhBFHRUAAFBi+gCGx7YBToTfck/WRxQzo972ZsX2Tl2VTrlHR5rhYjQzmHXxK6Q03mGLTjvS54CVEseGM++8SCaPVsLNrT21vhFJDBbIIIRPqnJIA15ZpcsCTW00einZL175yoKDd3ENFwy7Y+kIoVcsYLZxtxbX5+ydny8HTGNLlOWuTMCuDm0nV1p7HD7gp9cBw0t/8Z353a/RbU/fY5VIJBXxfBC9e/R/NZu9M3o7lrmUDwm0IurOCcocAu6lG2UHWNkohFll67elcroEsUqEPsq86LpEGombvS4p0vvZkEfGfxdlbpxg6r7ZixyLJWqipaJJlFVDKILu+v6pE7l9Oy5Hlp+YDSWy9wmc3ZuIfzJQqYYY5wcBEnfxjEKYky6PlNeI8n66pZbtxMz0q0t/tOz/2/U=
+  app: nd-travis-heroku-test
+  on:
+    repo: Holajuwon/nd-travis-heroku-test

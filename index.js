@@ -17,6 +17,10 @@ app.get("/", (req, res) => {
   res.send("Server working 🔥");
 });
 
+app.get("/app", (req, res) => {
+  res.send("Hello From Travis🔥");
+});
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
